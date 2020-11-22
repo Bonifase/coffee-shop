@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Chat from './components/chat/Chat';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <input type="checkbox" id="click"/>
+      <label htmlFor="click">
+        <i className="fab fa-facebook-messenger"></i>
+        <i className="fas fa-times"></i>
+      </label>
+
+      <div className="wrapper">
+        <div className="head-text">
+          Let's chat? - Online
+        </div>
+      <div className="chat-box">
+      <form action="#">
+        <Chat/>
+      </form>
+      </div>
+      </div>
     </div>
-  );
+  )
 }
 
 export default App;
